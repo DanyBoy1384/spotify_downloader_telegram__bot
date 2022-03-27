@@ -49,9 +49,9 @@ def download_song(update, context, link):
         context.bot.send_message(chat_id=update.effective_chat.id, text=f'404\n"{song.trackName}" Not Found')
 
 
-WELCOME = '''Hi
+WELCOME = '''Hi Dear 
 This is Spotify Downloader!
-You can use the command.'''
+Just send me your link.'''
 ARTISTS_MESSAGE = '''send name and name of artist like this: Name artist'''
 SINGLE_MESSAGE = '''send name and name of artist like this:
 Name song
@@ -65,7 +65,7 @@ Name album - Name artist
 '''
 
 sort = {}
-telegram_token = 'token'
+telegram_token = '5257375565:AAEJaA35VZmJRlBPZ3W4vOM1Fbn6f3MZhcg'
 
 def start(update: Update, context: CallbackContext):
     context.bot.send_message(chat_id=update.effective_chat.id, text=WELCOME)
@@ -112,8 +112,11 @@ def download(update: Update, context: CallbackContext):
             del sort[chat_id]
         else:
             context.bot.send_sticker(chat_id=update.effective_chat.id,
-                                     sticker='CAACAgQAAxkBAAIBFGBLNcpfFcTLxnn5lR20ZbE2EJbrAAJRAQACEqdqA2XZDc7OSUrIHgQ')
-            context.bot.send_message(chat_id=update.effective_chat.id, text='send me a link or use the commands!')
+                                     sticker='CAACAgQAAxkBAAEESBRiQBjc9xwH6pcdZCVoT0Ro_OPSywACngQAAuIN3CUj5edj-6DhmCME
+
+
+')
+            context.bot.send_message(chat_id=update.effective_chat.id, text='send me a valid link or use the commands!')
 
 
 def run():
